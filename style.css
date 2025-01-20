@@ -1,0 +1,321 @@
+body {
+  margin-top: 5%;
+  font-family: sans-serif;
+  margin-left: 20%;
+  margin-right: 20%;
+  position: relative;
+}
+p {
+  font-size: 2vh;
+  line-height: 1.4;
+}
+
+.jmeno {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.headertext {
+  flex: 1;
+  position: relative;
+}
+
+.headertext p {
+  font-size: 25px;
+  margin-left: 100px;
+}
+
+.headertext h1 {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+header img {
+  height: 200px;
+  width: 200px;
+}
+
+.rectangle-blue-1, .rectangle-red-1 {
+  position: absolute;
+}
+
+.rectangle-blue-1 {
+  background-color: #0047A5;
+  height: 40px;
+  width: 250px;
+  z-index: -1;
+  top: 80px;
+  left: -80px;
+}
+
+.rectangle-red-1 {
+  height: 40px;
+  width: 250px;
+  z-index: -2;
+  top: 40px;
+  left: 200px;
+  background-color: #FF3131;
+}
+
+.technologie {
+  display: grid;
+  grid-template-areas: "js react html css";
+  gap: 70px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.technologie i {
+  font-size: 120px;
+  transition: color 0.3s ease;
+}
+
+.js {
+  grid-area: js;
+  color: yellow;
+  position: relative;
+}
+
+.react {
+  grid-area: react;
+  color: rgb(67, 186, 226);
+  position: relative;
+}
+
+.html {
+  grid-area: html;
+  color: orange;
+  position: relative;
+}
+
+.css {
+  grid-area: css;
+  color: rgb(0, 98, 255);
+  position: relative;
+}
+
+.technologie .project-links {
+  display: none;
+  position: absolute;
+  top: 140px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+}
+
+.technologie .js:hover i,
+.technologie .react:hover i,
+.technologie .html:hover i,
+.technologie .css:hover i {
+  color: black;
+  transform: scale(1.1);
+  text-decoration: none;
+}
+
+.technologie .js:hover .project-links,
+.technologie .react:hover .project-links,
+.technologie .html:hover .project-links,
+.technologie .css:hover .project-links {
+  display: block;
+}
+
+.odsazeni {
+  height: 2px;
+  width: 100%;
+  border: none;
+  background-color: black;
+  margin-top: 50px;
+}
+
+.zkusenosti {
+  position: relative;
+  margin-bottom: 40px;
+  margin-top: 50px;
+}
+
+h5 {
+  font-size: 3vh;
+  margin-top: -10px;
+  margin-left: 5%;
+}
+
+h6 {
+  margin-left: 10%;
+  font-size: medium;
+  margin-top: -20px;
+}
+
+.rectangle-yellow, .rectangle-blue, .rectangle-red, .rectangle-red-3 {
+  position: absolute;
+
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+
+.rectangle-yellow {
+  background-color: yellow;
+  top: 25px;
+  left: 60px;
+  height: 30px;
+  width: 200px;
+}
+
+.rectangle-blue {
+  background-color: #0047A5;
+  height: 40px;
+  width: 250px;
+  top: 10px;
+  left: 150px;
+}
+
+.rectangle-red {
+  background-color: #FF3131;
+  top: 30px;
+  left: 200px;
+  height: 30px;
+  width: 500px;
+}
+
+.rectangle-red-3 {
+  background-color: #FF3131;
+  top: -15px;
+  left: 250px;
+  height: 40px;
+  width: 250px;
+}
+
+.gb-nadpis, .dat-nadpis, .vrpp-nadpis {
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: x-large;
+}
+.oddelit {
+  margin-top: 1%;
+  font-size: 2vh
+}
+
+li {
+  font-size: 2vh;
+}
+ul {
+  margin-left: 5%;
+}
+
+.nadpisdovednosti {
+  position: relative;
+  display: flex;
+}
+.rectangle-skills-blue-1, .rectangle-skills-red-1, .rectangle-skills-yellow-1 {
+  position: absolute;
+  z-index: -1;
+}
+
+.rectangle-skills-red-1 {
+  background-color: #FF3131;
+  height: 80px;
+  width: 250px;
+  left: 50%;
+  top: 30%;
+}
+.rectangle-skills-blue-1 {
+  background-color: #0047A5;
+  height: 80px;
+  width: 250px;
+  left: 60%;
+  top: 85%
+
+}
+.rectangle-skills-yellow-1 {
+  background-color: yellow;
+  height: 80px;
+  width: 250px;
+  left: 70%;
+  top: 140%;
+  z-index: 0;
+ 
+}
+li {
+  line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+  body {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .rectangle-blue-1, .rectangle-red-1 {
+    width: 40%;
+  }
+  .rectangle-blue-1 {
+    left: 10%;
+    top: 70px;
+  }
+
+  .jmeno {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .headertext {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  header img {
+    height: auto;
+    max-width: 90%;
+    margin: 10px 0; 
+  }
+
+  .technologie {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: center;
+
+  }
+
+  .technologie i {
+    font-size: 60px;
+  }
+
+  .technologie .project-links {
+    width: 100%;
+    transform: none;
+    top: 80px;
+  }
+
+  .odsazeni {
+    margin-top: 20px;
+  }
+
+  h5 {
+    font-size: 2.5vh;
+    margin-top: 10px;
+  }
+
+  h6 {
+    font-size: small;
+    margin-top: 10px;
+  }
+
+  .rectangle-yellow, .rectangle-blue, .rectangle-red, .rectangle-red-3 {
+    width: 150px;
+  }
+
+  .rectangle-skills-red-1, .rectangle-skills-blue-1, .rectangle-skills-yellow-1 {
+    width: 150px;
+    text-align: center;
+  }
+}
